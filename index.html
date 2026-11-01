@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>빛 조절 실험실 · p5 × Arduino</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+  <script defer src="sketch.js"></script>
+</head>
+<body>
+<main>
+  <p class="eyebrow">PHYSICAL COMPUTING / 01</p>
+  <h1>빛 조절 실험실</h1>
+  <p>슬라이더를 움직여 아두이노 LED의 밝기를 조절하세요.</p>
+  <section id="preview" aria-label="LED 밝기 미리보기"></section>
+  <section class="controls">
+    <div class="reading"><label for="brightness">LED 밝기</label><output id="value">0 / 255 · 0%</output></div>
+    <div id="slider"></div>
+    <div class="scale"><span>OFF</span><span>MAX</span></div>
+    <div id="presets"></div>
+    <button id="connect" type="button">아두이노 연결</button>
+    <p id="status" role="status">미리보기 모드 · 실제 LED를 조절하려면 연결하세요.</p>
+  </section>
+  <aside>Uno 기준: D9 → 220~330Ω 저항 → LED 긴 다리(+), 짧은 다리(−) → GND.<br>Arduino 코드를 먼저 업로드하고 시리얼 모니터를 닫으세요.</aside>
+  <footer>p5.js + Web Serial API · PWM 9 · 9600 baud</footer>
+</main>
+</body>
+</html>
